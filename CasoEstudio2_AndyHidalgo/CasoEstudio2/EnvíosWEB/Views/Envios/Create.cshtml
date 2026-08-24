@@ -1,0 +1,62 @@
+﻿@model EnvíosWEB.Models.EnviosViewModel
+
+@{
+    ViewData["Title"] = "Crear Envio";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Registro de envios</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Destinatario" class="form-label"></label>
+                            <input asp-for="Destinatario" class="form-control"/>
+                            <span asp-validation-for="Destinatario" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Direccion" class="form-label">Dirección</label>
+                            <input asp-for="Direccion" class="form-control"/>
+                            <span asp-validation-for="Direccion" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Distancia" class="form-label">Distancia (km)</label>
+                                <input asp-for="Distancia" class="form-control" type="number"/>
+                                <span asp-validation-for="Distancia" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Peso" class="form-label">Peso (kg)</label>
+                                <input asp-for="Peso" class="form-control" type="number"/>
+                                <span asp-validation-for="Peso" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" name="EsUrgente" value="true" id="urgenteCheck">
+                            <input type="hidden" name="EsUrgente" value="false" />
+                            <label class="form-check-label" for="urgenteCheck">
+                                ¿Es un envio urgente? (Mayor costo)
+                            </label>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success">
+                                <i class="bi bi-save"></i> Guardar Envío
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar y Volver</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

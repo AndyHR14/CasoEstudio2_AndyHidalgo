@@ -1,0 +1,6 @@
+@CostosAPI_HostAddress = http://localhost:5005
+
+GET {{CostosAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

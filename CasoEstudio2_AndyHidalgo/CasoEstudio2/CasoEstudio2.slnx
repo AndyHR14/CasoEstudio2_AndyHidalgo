@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CostosAPI/CostosAPI.csproj" />
+  <Project Path="EnviosAPI/EnviosAPI.csproj" />
+  <Project Path="EnviosTESTS/EnviosTESTS.csproj" />
+  <Project Path="EnvíosWEB/EnvíosWEB.csproj" />
+</Solution>
